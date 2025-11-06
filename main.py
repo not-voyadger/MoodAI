@@ -1,5 +1,5 @@
 #--------------------------------
-# Full definition of MoodGPT - Convolutional Neural Network for emotion recognition via webcam, model definition, training and testing in this single file.
+# Full definition of MoodAI - Convolutional Neural Network for emotion recognition via webcam, model definition, training and testing in this single file.
 # Arsenii Fadieiev 06.11.2025
 #--------------------------------
 
@@ -38,7 +38,7 @@ num_classes = len(train_dataset.classes)
 print(f"Found {num_classes} classes:", train_dataset.classes)
 
 # Model implementation
-class MoodGPT(nn.Module):
+class MoodAI(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
         # Сonvolutional layers
@@ -60,7 +60,7 @@ class MoodGPT(nn.Module):
         x = self.fc_layers(x)
         return x
 
-model = MoodGPT(num_classes).to(device)
+model = MoodAI(num_classes).to(device)
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
