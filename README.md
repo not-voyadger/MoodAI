@@ -26,6 +26,7 @@ pip install torch torchvision
 ## TODO
 
 - Implement **continual training**: load existing model weights before training to continue improving the model instead of starting from scratch.
+- Implement emotion detecting using webcam.
 - Implement data augmentation to improve accuracy and robustness.
 
 
