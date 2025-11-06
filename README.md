@@ -1,6 +1,6 @@
-# MoodGPT – Facial Emotion Recognition with CNN
+# MoodAI – Facial Emotion Recognition with CNN
 
-MoodGPT is a Python project that uses a Convolutional Neural Network (CNN) to recognize emotions from facial images.
+MoodAI is a Python project that uses a Convolutional Neural Network (CNN) to recognize emotions from facial images.
 
 The trained model detects **7 emotion classes** via **FER2013**:  
 `['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']`
