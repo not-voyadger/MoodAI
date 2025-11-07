@@ -7,6 +7,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 import os
+import sys
 
 from model import MoodAI, IMAGE_SIZE
 
@@ -29,7 +30,14 @@ test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False)
 
 num_classes = len(test_dataset.classes)
 model = MoodAI(num_classes).to(device)
-model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
+
+if os.path.exists(MODEL_PATH):
+    print(f"Starting to load existing weights...")
+    model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
+else:
+    print(f"Could not find trained model, please run train.py first.")
+    sys.exit(1)
+
 model.eval()
 
 correct, total = 0, 0
