@@ -9,11 +9,13 @@ The trained model detects **7 emotion classes** via **FER2013**:
 
 ## Training Info
 
-![alt text](https://github.com/not-voyadger/MoodAI/blob/develop/assets/screenshot1.PNG)
+As seen on a screenshot, loss is decreasing with each epoch, which means that model is, in fact, learning:
 
-As seen on a screenshot, loss is decreasing with each epoch, which means that model is, in fact, learning.
+![alt text](https://github.com/not-voyadger/MoodAI/blob/develop/assets/screenshot2.PNG)
 
-After 10 epochs (~10 minutes) on one GPU, the test accuracy of recognition is reaching ~56%, which is expected for a simple CNN trained on limited data.  
+![alt_text](https://github.com/not-voyadger/MoodAI/blob/develop/assets/screenshot3.PNG)
+
+After 10 epochs (~30 minutes) on one GPU, the test accuracy of recognition is reaching ~60%, which is quite good for a simple CNN trained on limited data.  
 
 ---
 
@@ -28,6 +30,7 @@ pip install torch torchvision
 ## Recent additions
 
 - Continual training implemented. Now, after each training weights are being added to a model, not rewriting the whole model like a previous version.
+- Model architecture modified, Residual blocks added to help the network preserve important features and train deeper layers more effectively. The input size of the first FC layer was corrected to match the flattened output of the convolutional layers.
 
 ---
 
