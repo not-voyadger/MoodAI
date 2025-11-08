@@ -30,7 +30,7 @@ pip install torch torchvision
 ## Recent additions
 
 - Continual training implemented. Now, after each training weights are being added to a model, not rewriting the whole model like a previous version.
-- Model architecture modified, Residual blocks added to help the network preserve important features and train deeper layers more effectively. The input size of the first FC layer was corrected to match the flattened output of the convolutional layers.
+- Model architecture modified, Residual blocks added to help the network preserve important features and train deeper layers more effectively. The input size of the first FC layer was corrected to match the flattened output of the convolutional layers. All new features resolved in an increase of accuracy from ~56% to ~60%.
 
 ---
 
