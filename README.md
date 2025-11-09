@@ -22,7 +22,7 @@ After 10 epochs (~30 minutes) on one GPU, the test accuracy of recognition is re
 ## Installation
 
 ```bash
-pip install torch torchvision
+pip install torch torchvision opencv-python
 ```
 
 ---
