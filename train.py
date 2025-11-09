@@ -14,7 +14,7 @@ from model import MoodAI, IMAGE_SIZE
 
 DATA_DIR = "data"
 BATCH_SIZE = 32
-EPOCHS = 10
+EPOCHS = 20
 LEARNING_RATE = 0.001
 MODEL_PATH = "face_model.pth"
 
