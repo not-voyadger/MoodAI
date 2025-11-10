@@ -31,12 +31,12 @@ pip install torch torchvision opencv-python
 
 - Continual training implemented. Now, after each training weights are being added to a model, not rewriting the whole model like a previous version.
 - Model architecture modified, Residual blocks added to help the network preserve important features and train deeper layers more effectively. The input size of the first FC layer was corrected to match the flattened output of the convolutional layers. All new features resolved in an increase of accuracy from ~56% to ~60%.
+- Added camera.py, which finds a face on a webcam and converts it to the right format. Model is trying to guess persons emotion.
 
 ---
 
 ## TODO
 
-- Implement emotion detecting using webcam.
 - Implement data augmentation to improve accuracy and robustness.
 
 ---
